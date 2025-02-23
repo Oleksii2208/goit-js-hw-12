@@ -1,0 +1,145 @@
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  /* justify-content: center;
+  max-width: 1128px; */
+  /* margin: 0 100px; */
+}
+
+.form {
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
+
+.input {
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+.input:focus {
+  border: 2px solid #4e75ff;
+}
+
+.button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #808080;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.gallery-item img {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid #ddd;
+}
+
+.image-info {
+  display: flex;
+  background: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.image-info p {
+  margin: 4px 0;
+}
+
+.gallery-item:hover {
+  transform: scale(1.025);
+}
+
+.hidden {
+  display: none;
+}
+
+#loader {
+  border: 6px solid #fff;
+  border-top: 6px solid #4e75ff;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.more-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.more-btn:hover,
+.more-btn:focus {
+  background-color: #6c8cff;
+}
