@@ -69,6 +69,7 @@ refs.form.addEventListener('submit', async e => {
           'Sorry, there are no images matching your search query. Please try again!',
         position: 'topRight',
       });
+      hideLoadMoreBtn();
     } else {
       templateImages(hits);
       if (hits.length < params.totalHits) {
@@ -77,6 +78,7 @@ refs.form.addEventListener('submit', async e => {
     }
   } catch (error) {
     hideLoader();
+    hideLoadMoreBtn();
     iziToast.error({
       title: 'Error',
       message: 'Something went wrong! Please try again later.',
@@ -99,7 +101,6 @@ refs.loadMoreBtn.addEventListener('click', async () => {
       params.perPage
     );
     hideLoader();
-    showLoadMoreBtn();
 
     if (hits.length === 0) {
       hideLoadMoreBtn();
@@ -119,10 +120,13 @@ refs.loadMoreBtn.addEventListener('click', async () => {
           message: "We're sorry, but you've reached the end of search results.",
           position: 'topRight',
         });
+      } else {
+        showLoadMoreBtn();
       }
     }
   } catch (error) {
     hideLoader();
+    hideLoadMoreBtn();
     iziToast.error({
       title: 'Error',
       message: 'Something went wrong! Please try again later.',
